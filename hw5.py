@@ -30,7 +30,8 @@ def main(filename):
         for word in words:
             # then, remove (strip) unwanted punctuations from every word
             # "dream." => "dream"
-            word = word.translate(str.maketrans('', '', string.punctuation))
+            word = word.strip()
+            word = word.strip(string.punctuation)
             # check if word is not empty
             if word:
                 # append the word to "all_words" list
